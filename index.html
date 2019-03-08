@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap 4 (WIP)</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600|Poiret+One|Prata'>
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      /* ----- COLORS ----- */
+/* --- Text --- */
+.text__primary {
+  color: #363636;
+}
+
+.text__secondary {
+  color: #BBB9AD;
+}
+
+/* --- Background --- */
+.bg__primary {
+  background: #F7F4ED;
+}
+
+.bg__secondary {
+  background: #EEDF56;
+}
+
+.bg__blue {
+  background: #B8E4E7;
+}
+
+/* ----- FONTS ----- */
+.font__serif {
+  font-family: "Prata", serif;
+}
+
+.font__sans-serif {
+  font-family: "Oswald", sans-serif;
+}
+
+.font__cursive {
+  font-family: "Poiret One", cursive;
+}
+
+/* ----- OTHER CLASSES ----- */
+.upper {
+  text-transform: uppercase;
+}
+
+/* ----- Universal ----- */
+*,
+body {
+  box-sizing: border-box;
+  color: #363636;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Prata", serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #363636;
+}
+@media (max-width: 900px) {
+  h2 {
+    font-size: 40px;
+    letter-spacing: 1.5px;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 35px;
+    letter-spacing: 1px;
+  }
+}
+
+.btn {
+  padding: 0;
+  color: #363636;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.btn:hover {
+  text-decoration: none;
+  color: #363636;
+}
+
+/* ----- BANNER ----- */
+.section--banner {
+  background-color: #EEDF56;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("http://mpoweryogastudio.com/wp-content/uploads/2014/04/hero-update-1.jpg");
+  position: relative;
+}
+
+.banner__social-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.banner__social-container ul {
+  overflow: hidden;
+}
+.banner__social-container ul li {
+  float: left;
+  padding-right: 10px;
+}
+.banner__social-container ul li .fab {
+  font-size: 16px;
+  color: #BBB9AD;
+}
+.banner__social-container ul li .fab:hover {
+  color: #363636;
+}
+
+.banner__button-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.banner__button-join {
+  color: #363636;
+  border-bottom: 2px solid #EEDF56;
+  border-radius: 0;
+}
+.banner__button-join:hover {
+  color: #363636;
+  border-bottom: 2px solid #363636;
+  transition: 0.3s ease-in-out;
+}
+
+.banner__content {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 750px;
+  letter-spacing: 2px;
+}
+@media (max-width: 576px) {
+  .banner__content {
+    margin-bottom: 500px;
+  }
+}
+@media (max-width: 450px) {
+  .banner__content {
+    margin-bottom: 300px;
+  }
+}
+.banner__content h1 {
+  font-family: "Poiret One", cursive;
+  font-size: 80px;
+}
+@media (max-width: 576px) {
+  .banner__content h1 {
+    font-size: 60px;
+  }
+}
+.banner__content h3 {
+  font-family: "Oswald", sans-serif;
+}
+.banner__content ul {
+  overflow: hidden;
+  display: inline-block;
+}
+.banner__content ul li {
+  float: left;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+}
+.banner__content ul li a {
+  color: #363636;
+  text-decoration: none;
+  padding: 10px;
+}
+.banner__content ul li a:hover {
+  text-decoration: none;
+  background: #EEDF56;
+}
+
+/* ----- ABOUT ----- */
+.section__fluid {
+  background: #F7F4ED;
+  text-align: center;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.section__fluid hr {
+  width: 15%;
+  margin: 30px auto;
+  background: #363636;
+  height: 1px;
+}
+.section__fluid p {
+  color: #363636;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+.section__fluid .link--chevron {
+  color: #363636;
+  padding: 10px;
+  margin: 20px 0;
+}
+.section__fluid .link--chevron .fa-chevron-right {
+  background: bg__blue;
+  color: #F7F4ED;
+}
+
+/* ----- NEW ----- */
+.section--new {
+  background: #F7F4ED;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container--new {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.container--new .container--color-new {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.container--new h2 {
+  padding: 20px;
+}
+.container--new .content__new {
+  margin: 20px 0;
+  padding: 0 30px;
+  border-left: 1px solid #363636;
+}
+.container--new .content__new p {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
+.container--new .content__new a {
+  padding: 5px;
+}
+@media (max-width: 576px) {
+  .container--new .content__new {
+    border-left: none;
+    padding-left: 20px;
+  }
+}
+
+/* ----- CHALLENGE // SPLIT SECTION ----- */
+.container--split {
+  padding-bottom: 20px;
+  color: #363636;
+}
+
+.img__challenge {
+  background-image: url("http://mpoweryogastudio.com/wp-content/uploads/2014/04/mPowerYoga_DSC_3340-Edit-1024x681.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .img__split {
+    padding: 150px;
+  }
+}
+
+.content__split {
+  padding: 30px;
+}
+.content__split h5 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.content__split hr {
+  width: 15%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #363636;
+  height: 1px;
+}
+@media (max-width: 900px) {
+  .content__split hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+.content__split p {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.content__split p .bold {
+  font-weight: 500;
+}
+.content__split a {
+  margin: 30px 20px 30px 0;
+}
+@media (max-width: 768px) {
+  .content__split {
+    margin-top: 15px;
+  }
+}
+
+/* ----- CLASSES ----- */
+.section--classes {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.content__classes h4 {
+  font-size: 28px;
+  color: #363636;
+  margin-bottom: 0;
+}
+.content__classes .instructor__classes {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.content__classes .link__register {
+  background: #EEDF56;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 0;
+}
+.content__classes .link__classes {
+  font-size: 14px;
+}
+
+.img__classes {
+  background-image: url("http://mpoweryogastudio.com/wp-content/themes/mpower/assets/img/upcoming-home.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+@media (max-width: 992px) {
+  .img__classes {
+    display: none;
+  }
+}
+
+/* ----- APP ----- */
+.section--app .img__app {
+  background-image: url("http://mpoweryogastudio.com/wp-content/uploads/2014/04/spotlight2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+@media (max-width: 1167px) {
+  .section--app .btn-app {
+    margin: 10px 10px 10px 0;
+  }
+}
+
+/* ----- SPOTLIGHT ----- */
+.section--spotlight .img__spotlight {
+  background-image: url("http://mpoweryogastudio.com/wp-content/uploads/2014/04/DSC_7988.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+/* ----- INSTAGRAM ----- */
+.section--instagram {
+  color: #363636;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section--instagram .container__img-lg-instagram {
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .section--instagram .container__img-lg-instagram {
+    margin-bottom: 20px;
+  }
+}
+.section--instagram .img__lg--instagram {
+  background-image: url("http://mpoweryogastudio.com/wp-content/uploads/2015/04/IMG_2078-1024x682.jpg");
+  position: relative;
+}
+.section--instagram .img__lg--instagram .content__lg--instagram {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 20px;
+}
+.section--instagram .img__lg--instagram .content__lg--instagram .fa-instagram {
+  font-size: 56px;
+  color: blue;
+}
+@media (max-width: 768px) {
+  .section--instagram .img__lg--instagram {
+    padding-top: 175px;
+    padding-bottom: 175px;
+  }
+}
+.section--instagram .img__lg--instagram,
+.section--instagram .img__top-right--instagram,
+.section--instagram .img__bottom-left--instagram,
+.section--instagram .img__bottom-right--instagram {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .section--instagram .row__margin-top-instagram {
+    margin-top: 20px;
+  }
+}
+.section--instagram .link__top-left--instagram {
+  padding: 150px 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+@media (max-width: 1200px) {
+  .section--instagram .link__top-left--instagram {
+    padding: 100px 10px;
+  }
+}
+@media (max-width: 900px) {
+  .section--instagram .link__top-left--instagram {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .section--instagram .link__top-left--instagram {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 576px) {
+  .section--instagram .link__top-left--instagram {
+    padding: 50px 0;
+  }
+}
+.section--instagram .img__bottom-left--instagram,
+.section--instagram .img__bottom-right--instagram {
+  padding: 182px 0;
+}
+@media (max-width: 1200px) {
+  .section--instagram .img__bottom-left--instagram,
+  .section--instagram .img__bottom-right--instagram {
+    padding: 138px 0;
+  }
+}
+@media (max-width: 900px) {
+  .section--instagram .img__bottom-left--instagram,
+  .section--instagram .img__bottom-right--instagram {
+    padding: 88px 0;
+  }
+}
+@media (max-width: 767px) {
+  .section--instagram .img__bottom-left--instagram,
+  .section--instagram .img__bottom-right--instagram {
+    padding: 138px 0;
+  }
+}
+@media (max-width: 576px) {
+  .section--instagram .img__bottom-left--instagram,
+  .section--instagram .img__bottom-right--instagram {
+    padding: 88px 0;
+  }
+}
+.section--instagram .container__img--instagram {
+  height: 100%;
+  padding-bottom: 20px;
+}
+.section--instagram .img__top-right--instagram {
+  background-image: url("http://mpoweryogastudio.com/wp-content/uploads/2017/01/12697005_1656692234580848_5258478277293093255_o-1024x682.jpg");
+  height: 100%;
+}
+.section--instagram .img__bottom-left--instagram {
+  background-image: url("http://mpoweryogastudio.com/wp-content/uploads/2015/03/DSC_3321-1024x681.jpg");
+}
+.section--instagram .img__bottom-right--instagram {
+  background-image: url("http://mpoweryogastudio.com/wp-content/uploads/2017/04/IMG_0985.jpeg");
+}
+
+/* ----- EMAIL ----- */
+.section--email {
+  position: relative;
+  color: #363636;
+  padding-top: 50px;
+}
+.section--email .email--m {
+  color: #F7F4ED;
+  background: #363636;
+  font-size: 28px;
+  border-radius: 20px;
+  padding: 10px 15px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.section--email .email--m:hover {
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .section--email .email--m {
+    display: none;
+  }
+}
+.section--email p {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+}
+.section--email .form-group {
+  position: relative;
+}
+.section--email .form--email {
+  border: 2px solid #363636;
+  border-radius: 0;
+  padding: 20px;
+  background: #F7F4ED;
+  color: #BBB9AD;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1.5px;
+}
+.section--email .btn__email-submit {
+  color: #BBB9AD;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  border-left: 2px solid #363636;
+  border-radius: 0;
+  padding: 10px 20px;
+}
+.section--email .social-media--email {
+  overflow: hidden;
+}
+.section--email .social-media--email li {
+  float: left;
+  padding: 25px 25px 0 5px;
+}
+.section--email .social-media--email li a {
+  font-size: 24px;
+  color: #BBB9AD;
+}
+.section--email hr {
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+/* ----- FOOTER ----- */
+.section--footer {
+  font-family: "Oswald", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.section--footer p {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.section--footer ul {
+  overflow: hidden;
+}
+.section--footer ul li {
+  float: left;
+  padding-right: 20px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.section--footer ul li a {
+  color: #BBB9AD;
+}
+.section--footer ul li a:hover {
+  text-decoration: none;
+  color: #363636;
+  transition: 0.3s ease-in-out;
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- BANNER -->
+
+<section class="section section--banner">
+	<div class="banner__social-container">
+		<ul>
+			<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+			<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+		</ul>
+	</div>
+	
+	<div class="banner__button-container">
+		<a href="#" class="btn btn-link banner__button-join upper">Experience M&middot;Power</a>
+	</div>
+	
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<div class="banner__content">
+					<h1 class="upper">M&middot;Power</h1>
+					<h3 class="upper">Yoga &middot; Barre</h3>
+					<ul>
+						<li><a href="#" class="nav">About</a></li>
+						<li><a href="#" class="nav">Classes</a></li>
+						<li><a href="#" class="nav">New to Yoga?</a></li>
+						<li><a href="#" class="nav">The Studio</a></li>
+						<li><a href="#" class="nav">Events</a></li>
+						<li><a href="#" class="nav">Teacher Training</a></li>
+						<li><a href="#" class="nav">Inspiration</a></li>
+						<li><a href="#" class="nav">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- ABOUT // FULL SECTION-->
+
+<section class="section section__fluid section--about section--full">
+	<div class="container-fluid container--full">
+		<div class="row justify-content-center">
+			<div class="col-lg-9 col-md-10">
+				<h2>M&middot;Power the True You</h2>
+				<hr>
+				<p>We inspire our students to live true to themselves with engaging classes, meaningful connection to the community, and a memorable experience every time they walk through our doors.</p>
+				<a href="#" class="btn btn-link link--chevron upper">Learn More About Us <i class="fas fa-chevron-right"></i></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- NEW -->
+
+<section class="section section--new">
+	<div class="container-fluid container--new">
+		<div class="bg__secondary container--color-new">
+			<div class="row">
+				<div class="col-sm-6">
+					<h2>New to M&middot;Power?</h2>
+				</div>
+				<div class="col-sm-6">
+					<div class="content__new">
+						<p>New students get 30 days for just $30!</p>
+						<a href="#" class="btn btn-link link--chevron upper">Sign Up Today <i class="fas fa-chevron-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- CHALLENGE // SPLIT SECTION-->
+
+<section class="section section--challenge section--split bg__primary">
+	<div class="container-fluid container--challenge container--split">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="img__challenge img__split"></div>
+			</div>
+			<div class="col-md-6">
+				<div class="content__challenge content__split bg__blue">
+					<h5 class="upper">7 Class Challenge</h5>
+					<h2>
+						Take the M&middot;Power
+						<br>
+						7 Class Challenge
+					</h2>
+					<hr>
+					<p>Take 7 classes during your 30-day trial and <span class="bold">get special discounts on membership!</span></p>
+					<a href="#" class="btn btn-link link--chevron upper">Sign Up Today <i class="fas fa-chevron-right"></i></a>
+					<a href="#" class="btn btn-link link--chevron upper">Learn More <i class="fas fa-chevron-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- CLASSES -->
+
+<section class="section section--classes bg__primary">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-xl-6">
+				<div class="content__classes">
+					<h2>Upcoming Classes</h2>
+					<hr>
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<h4 class="font__serif">M.Power 2</h4>
+							<p class="upper text__secondary instructor__classes">Michelle Devore Zuniga</p>
+						</div>
+						<div class="col-4 col-md-2">
+							<a href="#" class="btn btn-link link__register upper">Register</a>
+						</div>
+						<div class="col-8 col-md-4">
+							<p class="time__classes">12:00 pm - 1:00 pm</p>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<h4 class="font__serif">M.Power Cardio Barre</h4>
+							<p class="upper text__secondary instructor__classes">Stacey Dorsey</p>
+						</div>
+						<div class="col-4 col-md-2">
+							<a href="#" class="btn btn-link link__register upper">Register</a>
+						</div>
+						<div class="col-8 col-md-4">
+							<p class="time__classes">12:00 pm - 1:00 pm</p>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<h4 class="font__serif">M.Power 1</h4>
+							<p class="upper text__secondary instructor__classes">Dani Yarusso</p>
+						</div>
+						<div class="col-4 col-md-2">
+							<a href="#" class="btn btn-link link__register upper">Register</a>
+						</div>
+						<div class="col-8 col-md-4">
+							<p class="time__classes">3:30 pm - 4:30 pm</p>
+						</div>
+					</div>
+					<a href="#" class="btn btn-link link--chevron link__classes upper">See All Classes <i class="fas fa-chevron-right"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-4 col-xl-6">
+				<div class="img__classes"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- APP // SPLIT SECTION-->
+
+<section class="section section--app section--split bg__primary">
+	<div class="container-fluid container--app container--split">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="img__app img__split"></div>
+			</div>
+			<div class="col-md-6">
+				<div class="content__app content__split bg__secondary">
+					<h5 class="upper">Our New App</h5>
+					<h2>Take M&middot;Power With</h2>
+					<hr>
+					<p>Download our app to sign up for classes and stay up to date with our schedule no matter where life takes you.</p>
+					<a href="#" class="btn btn-link btn-app"><img src="http://mpoweryogastudio.com/wp-content/uploads/2014/04/apple.png"></a>
+					<a href="#" class="btn btn-link btn-app"><img src="http://mpoweryogastudio.com/wp-content/uploads/2014/04/google.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- MEMBER // FULL SECTION -->
+
+<section class="section section__fluid section--about section--full">
+	<div class="container-fluid container--full">
+		<div class="row justify-content-center">
+			<div class="col-lg-9 col-md-10">
+				<h2>Become a member of the M&middot;Power community.</h2>
+				<hr>
+				<p>Becominga member at M&middot;Power comes with more than just unlimited yoga and barre classes. Join today and get free mat and towel rentals, discounts on retail and programming, and even free Moxie Session workshops.</p>
+				<a href="#" class="btn btn-link link--chevron upper">Sign Up Today <i class="fas fa-chevron-right"></i></a>
+				<a href="#" class="btn btn-link link--chevron upper">Learn More <i class="fas fa-chevron-right"></i></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- SPOTLIGHT // SPLIT SECTION-->
+
+<section class="section section--spotlight section--split bg__primary">
+	<div class="container-fluid container--spotlight container--split">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="img__spotlight img__split"></div>
+			</div>
+			<div class="col-md-6 order-md-first">
+				<div class="content__app content__split bg__blue">
+					<h5 class="upper">Class Spotlight</h5>
+					<h2>Classic Barre.</h2>
+					<hr>
+					<p><span class="bold">M&middot;Power Classic Barre combines the stretching and toning of yoga, the core work of Pilates, and the strengthening principles of Ballet.</span>  A low impact class that uses props ranging from hand weights to stability balls to add challenge, Classic Barre is sure to tone your muscles and firm your body! Move mindfully, all the while building coordination, strength, and self-awareness. This class is an all levels class, beginners are always welcome.</p>
+					<a href="#" class="btn btn-link link--chevron upper">Register for Class Today <i class="fas fa-chevron-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section class="section section--instagram bg__primary">
+	<div class="container-fluid container--instagram">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="container__img-lg-instagram">
+					<div class="img__lg--instagram">
+						<div class="content__lg--instagram">
+							<p class="upper">@MPowerYogaStudio</p>
+							<i class="fab fa-instagram"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row row__margin-top-instagram">
+					<div class="col-6">
+						<div class="link__top-left--instagram bg__secondary">
+							<p>Follow us on <br> Instagram</p>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="container__img--instagram">
+							<div class="img__top-right--instagram"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<div>
+							<div class="img__bottom-left--instagram"></div>
+						</div>
+					</div>
+					<div class="col-6">
+						<div>
+							<div class="img__bottom-right--instagram"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- EMAIL -->
+
+<section class="section section--email bg__primary">
+	<div class="container container--email">
+		<div class="row">
+			<div class="col-md-6">
+				<a href="#" class="font__cursive email--m">M</a>
+			</div>
+			<div class="col-md-6">
+				<h2>Get M&middot;Powered</h2>
+				<p>Join our email list to get news in your inbox.</p>
+				<form>
+					<div class="form-group">
+						<input type="email" class="form-control form--email upper" placeholder="Enter Your Email">
+						<button type="submit" class="btn btn-link btn__email-submit">Submit</button>
+					</div>
+				</form>
+				<ul class="social-media--email">
+					<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+				</ul>
+				<p>3600 O'Donnell St <br> Suite 100 <br> Baltimore MD</p>
+			</div>
+		</div>
+		<hr>
+	</div>
+</section>
+
+
+<!-- FOOTER  -->
+
+<section class="section section--footer bg__primary">
+	<div class="container container--footer">
+		<div class="row">
+			<div class="col-md-6">
+				<p class="upper">Inspiring M&middot;Powered Living</p>
+				<a href="#"><img src="http://app.listen360.com/images/reviews_by_listen360_large.png?1481753964"></a>
+			</div>
+			<div class="col-md-6">
+				<ul>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms of Service</a></li>
+					<li><a href="#">Feedback</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+  <script src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
+
+  
+
+</body>
+
+</html>

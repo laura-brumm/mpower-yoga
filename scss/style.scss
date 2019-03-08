@@ -1,0 +1,728 @@
+/* ----- COLORS ----- */
+/* --- Text --- */
+$text__primary: #363636;
+$text__secondary: #BBB9AD;
+
+.text__primary {
+	color: $text__primary;
+}
+
+.text__secondary {
+	color: $text__secondary;
+}
+
+/* --- Background --- */
+
+$bg__primary: #F7F4ED;
+$bg__secondary: #EEDF56;
+
+$bg__blue: #B8E4E7;
+
+.bg__primary {
+	background: $bg__primary;
+}
+
+.bg__secondary {
+	background: $bg__secondary;
+}
+
+.bg__blue {
+	background: $bg__blue;
+}
+
+
+/* ----- FONTS ----- */
+
+$font__serif: 'Prata', serif;
+$font__sans-serif: 'Oswald', sans-serif;
+$font__cursive: 'Poiret One', cursive;
+
+.font__serif {
+	font-family: $font__serif;
+}
+
+.font__sans-serif {
+	font-family: $font__sans-serif;
+}
+
+.font__cursive {
+	font-family: $font__cursive;
+}
+
+/* ----- OTHER CLASSES ----- */
+
+.upper {
+	text-transform: uppercase;
+} 
+
+
+/* ----- Universal ----- */
+
+*,
+body {
+	box-sizing: border-box;
+	color: $text__primary;
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	font: {
+		family: $font__serif;
+		size: 50px;
+	}
+	letter-spacing: 2px;
+	margin: 0;
+	color: $text__primary;
+	
+	@media (max-width: 900px) {
+		font-size: 40px;
+		letter-spacing: 1.5px;
+	}
+	
+	@media (max-width: 576px) {
+		font-size: 35px;
+		letter-spacing: 1px;
+	}
+}
+
+.btn {
+	padding: 0;
+	color: $text__primary;
+	font: {
+		family: $font__sans-serif;
+		size: 16px;
+		weight: 700;
+	}
+	letter-spacing: 2px;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration: none;
+		color: $text__primary;
+	}
+}
+
+/* ----- BANNER ----- */
+
+.section--banner {
+	background: {
+		color: $bg__secondary;
+		position: center;
+		size: cover;
+		repeat: no-repeat;
+	}
+	background-image: url('http://mpoweryogastudio.com/wp-content/uploads/2014/04/hero-update-1.jpg');
+	position: relative;
+}
+
+.banner__social-container {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	
+	ul {
+		overflow: hidden;
+		
+		li {
+			float: left;
+			padding-right: 10px;
+			
+			.fab {
+				font-size: 16px;
+				color: $text__secondary;
+				
+				&:hover {
+					color: $text__primary;
+				}
+			}
+		}
+	}
+}
+
+.banner__button-container {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 1;
+}
+
+.banner__button-join {
+	color: $text__primary;
+	border-bottom: 2px solid $bg__secondary;
+	border-radius: 0;
+	
+	&:hover {
+		color: $text__primary;
+		border-bottom: 2px solid $text__primary;
+		transition: 0.3s ease-in-out;
+	}
+}
+
+.banner__content {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 750px;
+	letter-spacing: 2px;
+	
+	@media (max-width: 576px) {
+		margin-bottom: 500px;
+	}
+	
+	@media (max-width: 450px) {
+		margin-bottom: 300px;
+	}
+	
+	h1 {
+		font: {
+			family: $font__cursive;
+			size: 80px;
+		}
+		
+		@media (max-width: 576px) {
+			font-size: 60px;
+		}
+	}
+	
+	h3 {
+		font: {
+			family: $font__sans-serif;
+		}
+	}
+	
+	ul {
+		overflow: hidden;
+		display: inline-block;
+		
+		li {
+			float: left;
+			font: {
+				family: $font__sans-serif;
+				weight: 300;
+			}
+			
+			a {
+				color: $text__primary;
+				text-decoration: none;
+				padding: 10px;
+
+				
+				&:hover {
+					text-decoration: none;
+					background: $bg__secondary;
+				}
+			}
+		}
+	}
+}
+
+
+/* ----- ABOUT ----- */
+
+.section__fluid {
+	background: $bg__primary;
+	text-align: center;
+	padding: {
+		top: 75px;
+		bottom: 75px;
+	}
+	
+	hr {
+		width: 15%;
+		margin: 30px auto;
+		background: $text__primary;
+		height: 1px;
+	}
+	
+	p {
+		color: $text__primary;
+		font: {
+			family: $font__sans-serif;
+			weight: 300;
+			size: 22px;
+		}
+		letter-spacing: 1px;
+		padding: 10px 0;
+	}
+	
+	.link--chevron {
+		color: $text__primary;
+		padding: 10px;
+		margin: 20px 0;
+		
+		.fa-chevron-right {
+			background: bg__blue;
+			color: $bg__primary;
+		}
+	}
+}
+
+
+/* ----- NEW ----- */
+
+.section--new {
+	background: $bg__primary;
+	padding: {
+		top: 20px;
+		bottom: 20px;
+	}
+}
+
+.container--new {
+	padding: {
+		top: 10px;
+		bottom: 10px;
+	}
+	
+	.container--color-new {
+		padding: {
+			top: 30px;
+			bottom: 30px;
+		}
+	}
+	
+	h2 {
+		padding: 20px;
+	}
+	
+	.content__new {
+		margin: 20px 0;
+		padding: 0 30px;
+		border-left: 1px solid $text__primary;
+		
+		p {
+			font: {
+				family: $font__sans-serif;
+				weight: 300;
+				size: 16px;
+			}
+			letter-spacing: 1px;
+			margin-bottom: 0;
+			padding-left: 5px;
+		}
+		
+		a {
+			padding: 5px;
+		}
+		
+		@media (max-width: 576px) {
+			border-left: none;
+			padding-left: 20px;
+		}
+	}
+}
+
+
+/* ----- CHALLENGE // SPLIT SECTION ----- */
+
+.container--split {
+	padding-bottom: 20px;
+	color: $text__primary;
+}
+
+.img__challenge {
+	background-image: url('http://mpoweryogastudio.com/wp-content/uploads/2014/04/mPowerYoga_DSC_3340-Edit-1024x681.jpg');
+	background: {
+		position: center;
+		size: cover;
+		repeat: no-repeat;
+	}
+	height: 100%;
+}
+
+.img__split {
+	@media (max-width: 768px) {
+		padding: 150px;
+	}
+}
+
+.content__split {
+	padding: 30px;
+	
+	h5 {
+		font: {
+			family: $font__sans-serif;
+			weight: 700;
+			size: 16px;
+		}
+		letter-spacing: 1px;
+	}
+	
+	hr {
+		width: 15%;
+		margin: {
+			top: 30px;
+			bottom: 30px;
+		}
+		background: $text__primary;
+		height: 1px;
+		
+		@media (max-width: 900px) {
+			margin: {
+			top: 15px;
+			bottom: 15px;
+		}
+		}
+	}
+	
+	p {
+		font: {
+			family: $font__sans-serif;
+			weight: 300;
+			size: 16px;
+		}
+		letter-spacing: 1px;
+		
+		.bold {
+			font-weight: 500;
+		}
+	}
+	
+	a {
+		margin: 30px 20px 30px 0;
+	}
+	
+	@media (max-width: 768px) {
+		margin-top: 15px;
+	}
+}
+
+
+/* ----- CLASSES ----- */
+
+.section--classes {
+	padding: {
+		top: 30px;
+		bottom: 50px;
+	}
+}
+
+.content__classes {
+	h4 {
+		font-size: 28px;
+		color: $text__primary;
+		margin-bottom: 0;
+	}
+	
+	.instructor__classes {
+		font: {
+			family: $font__sans-serif;
+			size: 16px;
+			weight: 500;
+		}
+	}
+	
+	.link__register {
+		background: $bg__secondary;
+		padding: 5px 10px;
+		font-size: 12px;
+		border-radius: 0;
+	}
+	
+	.link__classes {
+		font-size: 14px;
+	}
+}
+
+.img__classes {
+	background-image: url('http://mpoweryogastudio.com/wp-content/themes/mpower/assets/img/upcoming-home.jpg');
+	background: {
+		position: center;
+		size: cover;
+		repeat: no-repeat;
+	}
+	height: 100%;
+	
+	@media (max-width: 992px) {
+		display: none;
+	}
+}
+
+
+/* ----- APP ----- */
+
+.section--app {
+	.img__app {
+		background-image: url('http://mpoweryogastudio.com/wp-content/uploads/2014/04/spotlight2.jpg');
+		background: {
+		position: center;
+		size: cover;
+		repeat: no-repeat;
+	}
+	height: 100%;
+	}
+	
+	.btn-app {
+		@media (max-width: 1167px) {
+			margin: 10px 10px 10px 0;
+		}
+	}
+}
+
+
+/* ----- SPOTLIGHT ----- */
+
+.section--spotlight {
+	.img__spotlight {
+		background-image: url('http://mpoweryogastudio.com/wp-content/uploads/2014/04/DSC_7988.jpg');
+		background: {
+		position: center;
+		size: cover;
+		repeat: no-repeat;
+	}
+	height: 100%;
+	}
+}
+
+
+/* ----- INSTAGRAM ----- */
+
+.section--instagram {
+	color: $text__primary;
+	font-family: $font__sans-serif;
+	text-align: center;
+	padding-bottom: 30px;
+	
+	.container__img-lg-instagram {
+		height: 100%;
+		
+		@media (max-width: 768px) {
+			margin-bottom: 20px;
+		}
+	}
+	
+	.img__lg--instagram {
+		background-image: url('http://mpoweryogastudio.com/wp-content/uploads/2015/04/IMG_2078-1024x682.jpg');
+		position: relative;
+		
+		.content__lg--instagram {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font: {
+				weight: 700;
+				size: 20px;
+			}
+			
+			.fa-instagram {
+				font-size: 56px;
+				color: blue;
+			}
+		}
+		
+		@media (max-width: 768px) {
+			padding: {
+				top: 175px;
+				bottom: 175px;
+			}
+		}
+	}
+	
+	.img__lg--instagram,
+	.img__top-right--instagram,
+	.img__bottom-left--instagram,
+	.img__bottom-right--instagram {
+		height: 100%;
+		background: {
+			position: center;
+			size: cover;
+			repeat: no-repeat;
+		}
+	}
+	
+	.row__margin-top-instagram {
+		@media (max-width: 767px) {
+			margin-top: 20px;
+		}
+	}
+	
+	.link__top-left--instagram {
+		padding: 150px 10px;
+		margin-bottom: 20px;
+		font-size: 20px;
+		font-weight: 300;
+		letter-spacing: 1.5px;
+		
+		@media (max-width: 1200px) {
+			padding: 100px 10px;
+		}
+		
+		@media (max-width: 900px) {
+			padding: 50px 0;
+		}
+		
+		@media (max-width: 767px) {
+			padding: 100px 0;
+		}
+		
+		@media (max-width: 576px) {
+			padding: 50px 0;
+		}
+	}
+	
+	.img__bottom-left--instagram,
+	.img__bottom-right--instagram {
+		padding: 182px 0;
+		
+		@media (max-width: 1200px) {
+			padding: 138px 0;
+		}
+		
+		@media (max-width: 900px) {
+			padding: 88px 0;
+		}
+		
+		@media (max-width: 767px) {
+			padding: 138px 0;
+		}
+		
+		@media (max-width: 576px) {
+			padding: 88px 0;
+		}
+	}
+	
+	.container__img--instagram {
+		height: 100%;
+		padding-bottom: 20px;
+	}
+	
+	.img__top-right--instagram {
+		background-image: url('http://mpoweryogastudio.com/wp-content/uploads/2017/01/12697005_1656692234580848_5258478277293093255_o-1024x682.jpg');
+		height: 100%;
+	}
+	
+	.img__bottom-left--instagram {
+		background-image: url('http://mpoweryogastudio.com/wp-content/uploads/2015/03/DSC_3321-1024x681.jpg');
+	}
+	
+	.img__bottom-right--instagram {
+		background-image: url('http://mpoweryogastudio.com/wp-content/uploads/2017/04/IMG_0985.jpeg');
+	}
+}
+
+
+/* ----- EMAIL ----- */
+
+.section--email {
+	position: relative;
+	color: $text__primary;
+	padding-top: 50px;
+	
+	.email--m {
+		color: $bg__primary;
+		background: $text__primary;
+		font-size: 28px;
+		border-radius: 20px;
+		padding: 10px 15px;
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+		
+		&:hover {
+			text-decoration: none;
+		}
+		
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+	
+	p {
+		font: {
+			family: $font__sans-serif;
+			size: 18px;
+			weight: 200;
+		}
+		letter-spacing: 1.5px;
+	}
+	
+	.form-group {
+		position: relative;
+	}
+	
+	.form--email {
+		border: 2px solid $text__primary;
+		border-radius: 0;
+		padding: 20px;
+		background: $bg__primary;
+		color: $text__secondary;
+		font-weight: 700;
+		font-family: $font__sans-serif;
+		letter-spacing: 1.5px;
+	}
+	
+	.btn__email-submit {
+		color: $text__secondary;
+		position: absolute;
+		top: 50%;
+		right: 5%;
+		transform: translateY(-50%);
+		border-left: 2px solid $text__primary;
+		border-radius: 0;
+		padding: 10px 20px;
+	}
+	
+	.social-media--email {
+		overflow: hidden;
+		
+		li {
+			float: left;
+			padding: 25px 25px 0 5px;
+			
+			a {
+				font-size: 24px;
+				color: $text__secondary;
+			}
+		}
+	}
+	
+	hr {
+		margin: 0;
+		padding-bottom: 30px;
+	}
+}
+
+
+/* ----- FOOTER ----- */
+
+.section--footer {
+	font-family: $font__sans-serif;
+	padding: {
+		top: 20px;
+		bottom: 50px;
+	}
+	
+	p {
+		font: {
+			size: 16px;
+			weight: 700;
+		}
+		letter-spacing: 1.5px;
+	}
+	
+	ul {
+		overflow: hidden;
+		
+		li {
+			float: left;
+			padding-right: 20px;
+			letter-spacing: 1px;
+			font: {
+				size: 14px;
+				weight: 200;
+			}
+			
+			a {
+				color: $text__secondary;
+				
+				&:hover {
+					text-decoration: none;
+					color: $text__primary;
+					transition: 0.3s ease-in-out;
+				}
+
+			}
+		}
+	}
+}
